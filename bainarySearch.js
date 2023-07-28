@@ -35,12 +35,15 @@ if (index !== false) {
 
 // UnSorted Number Binary Search
 const unSortedArray = [
-    5,
-    36,
-    86,
-    47,
-    952,
-    258
+    'Munira',
+    'Ahmad',
+    'Samira',
+    'Hasan',
+    'Zubair',
+    'Safir',
+    'Abdullah',
+    'Sajim',
+    'Sharifa'
 ]
 
 function unSortedArrayBinarySearch(array, target, low = 0, high = unSortedArray.length - 1) {
@@ -48,7 +51,9 @@ function unSortedArrayBinarySearch(array, target, low = 0, high = unSortedArray.
         return false;
     };  
     let i = 1;
-    array = array.sort((a , b) => a -b)
+    array = array.sort()
+
+    console.log(array)
     while (low <= high) {
         i++
         let mid = Math.floor((low + high) / 2)
@@ -65,12 +70,12 @@ function unSortedArrayBinarySearch(array, target, low = 0, high = unSortedArray.
 }
 
 
-const target = 36;
+const target = 'Munira';
 const ind = unSortedArrayBinarySearch(unSortedArray, target);
 
 if (ind !== false) {
-    console.log(`The number ${target} was found at index ${ind}.`);
+    console.log(`The Target ${target} was found at index ${ind}.`);
 } else {
-    console.log(`The number ${target} was not found in the array.`);
+    console.log(`The Target ${target} was not found in the array.`);
 }
 
